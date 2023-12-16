@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  title: "Portfolio"
+  favicon: msupa.jpeg
+  navbar:
+    left: 
+      - text: Home
+        href: index.qmd
+      - text: Projects
+        href: Projects.qmd
+      - text: Resume
+        href: resume.qmd
+        
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/Pravalikachinthakindi
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: [cosmo, theme_dark_custom.scss]
+    code-link: true
+    code-fold: show
+    highlight-style: github
+

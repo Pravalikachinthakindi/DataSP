@@ -1,0 +1,46 @@
+---
+title: "Predicting Student Exam Scores with Linear Regression: A Data-Driven Exploration"
+author: "Chinthakindi Pravalika"
+date: "2023-12-20"
+categories: [data-science, r-programming, linear-regression, exploratory-data-analysis]
+image: "data.webp"
+---
+
+# Introduction
+
+Welcome to an exciting journey into the world of data science! In this exploration, we'll dive into the intricacies of Linear Regression using the R programming language. Linear Regression is a powerful tool for predictive modeling, allowing us to understand and forecast relationships between variables.
+
+## The Challenge
+
+Imagine we have a dataset that captures information about student performance. Our goal is to investigate whether the number of hours a student studies correlates with their exam scores. Through the lens of Linear Regression, we aim to build a predictive model to forecast scores based on study hours.
+
+## Exploratory Data Analysis (EDA)
+
+Before we begin the coding adventure, let's first take a look at our dataset to understand its characteristics.
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Generate a synthetic student performance dataset for illustration purposes
+set.seed(123)
+student_data <- tibble(
+  student_id = 1:100,
+  study_hours = rnorm(100, mean = 20, sd = 5),
+  exam_scores = rnorm(100, mean = 75, sd = 10)
+)
+
+# Display the first few rows of the dataset
+head(student_data)
+
+# Visualize the relationship between study hours and exam scores
+ggplot(student_data, aes(x = study_hours, y = exam_scores)) +
+  geom_point(color = "blue") +
+  labs(title = "Relationship between Study Hours and Exam Scores", x = "Study Hours", y = "Exam Scores")
+# Fit a linear regression model
+linear_model <- lm(exam_scores ~ study_hours, data = student_data)
+
+# Display the summary of the linear regression model
+summary(linear_model)
+```

@@ -1,0 +1,12 @@
+<style>
+  .pdf-embed {
+    width: 800px;
+    height: 800px;
+    border: 2px solid #ddd; /* Add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+</style>
+
+<embed class="pdf-embed" src="_Pravalika.pdf" type="application/pdf">
+
+---

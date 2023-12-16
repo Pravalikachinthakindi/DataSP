@@ -1,0 +1,29 @@
+/*-- scss:defaults --*/
+// Base document colors
+$body-bg: #181818;
+$body-color: white;
+$link-color: red;
+
+// Code blocks
+$code-block-bg-alpha: -0.8;
+
+/*-- scss:rules --*/
+body {
+  background-color: $body-bg;
+  color: $body-color;
+  font-family: 'Arial', sans-serif; // Example: Change font-family for better readability
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline; // Example: Add underline to links
+}
+
+/* Styling for code blocks */
+pre {
+  background-color: rgba(0, 0, 0, $code-block-bg-alpha);
+  color: #fff;
+  padding: 1em;
+  border-radius: 5px; // Example: Add rounded corners to code blocks
+  overflow-x: auto; // Example: Add horizontal scrollbar for long lines of code
+}
